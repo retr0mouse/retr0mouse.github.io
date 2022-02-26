@@ -1,6 +1,7 @@
 import React from "react";
 import { FactsApi } from "./apis/FactsApi";
 import { useState, useEffect } from "react";
+import { RefreshButton } from "./components/RefreshButton";
 
 export default  function App() {
     const [fact, setFact] = useState("");
@@ -12,7 +13,9 @@ export default  function App() {
     return (
         <div>
             <h1>{fact}</h1>
-            <button onClick={() => fetchFact()}>REFRESH</button>
+            <RefreshButton
+                onClicked={() => fetchFact()}
+            />
         </div>
     );
 
@@ -21,4 +24,3 @@ export default  function App() {
         setFact(randomFact.text);
     }
 }
-
