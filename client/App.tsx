@@ -12,6 +12,7 @@ export default  function App() {
     return (
         <div>
             <h1>{fact}</h1>
+            <button onClick={() => fetchFact()}>REFRESH</button>
         </div>
     );
 
