@@ -31,6 +31,7 @@ const ButtonContainer = styled.div`
 `
 
 const A = styled.a`
+    cursor: pointer;
     height: 72%;
     color:white;
     font-family:Helvetica, sans-serif;
@@ -63,6 +64,6 @@ const A = styled.a`
 
 export function RefreshButton(props: Props): ReactElement {
     return (
-        <ButtonContainer onClick={() => props.onClicked()}><A href="#">REFRESH</A></ButtonContainer>   
+        <ButtonContainer onClick={() => props.onClicked()}><A>REFRESH</A></ButtonContainer>
     );
 }

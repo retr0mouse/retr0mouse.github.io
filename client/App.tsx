@@ -2,8 +2,16 @@ import React from "react";
 import { FactsApi } from "./apis/FactsApi";
 import { useState, useEffect } from "react";
 import { RefreshButton } from "./components/RefreshButton";
+import { FactText } from "./components/FactText";
+import styled from "styled-components";
 
-export default  function App() {
+const Body = styled.div`
+    background-color: #80808034;
+    border-radius: 10px;
+    border: black solid;
+`;
+
+export default function App() {
     const [fact, setFact] = useState("");
 
     useEffect(() => {
@@ -12,7 +20,11 @@ export default  function App() {
 
     return (
         <div>
-            <h1>{fact}</h1>
+            <Body>
+                <FactText
+                    text={fact}
+                />
+            </Body>
             <RefreshButton
                 onClicked={() => fetchFact()}
             />
