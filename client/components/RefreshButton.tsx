@@ -28,7 +28,7 @@ const ButtonContainer = styled.div`
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
-`
+`;
 
 const A = styled.a`
     cursor: pointer;
@@ -60,7 +60,7 @@ const A = styled.a`
         -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
         box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
     }
-`
+`;
 
 export function RefreshButton(props: Props): ReactElement {
     return (

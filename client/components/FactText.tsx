@@ -12,8 +12,16 @@ const Text = styled.h1`
     text-align: center;
 `;
 
+const TextContainer = styled.div`
+    background-color: #80808034;
+    border-radius: 10px;
+    border: black solid;
+`;
+
 export function FactText(props: Props): ReactElement {
     return (
-        <Text>{props.text}</Text>
+        <TextContainer>
+            <Text>{props.text}</Text>
+        </TextContainer>
     );
 }
